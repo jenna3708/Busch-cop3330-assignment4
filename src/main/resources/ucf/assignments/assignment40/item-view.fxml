@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.assignment40.ItemView">
+   <children>
+      <Button layoutX="120.0" layoutY="79.0" mnemonicParsing="false" text="Add Item" />
+      <Text layoutX="217.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to your item controls:" />
+      <Button layoutX="114.0" layoutY="116.0" mnemonicParsing="false" text="Delete Item" />
+      <Button layoutX="106.0" layoutY="154.0" mnemonicParsing="false" text="Show All Items" />
+      <Button layoutX="231.0" layoutY="79.0" mnemonicParsing="false" text="Show Completed" />
+      <Button layoutX="231.0" layoutY="116.0" mnemonicParsing="false" text="Show Incomplete" />
+      <Button layoutX="233.0" layoutY="154.0" mnemonicParsing="false" text="Show ToDo Lists" />
+   </children>
+</AnchorPane>
