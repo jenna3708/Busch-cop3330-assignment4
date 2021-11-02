@@ -1,0 +1,102 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class list{
+     -string title
+     -arrayList<item> items
+     addItem()
+     deleteItem()
+     getTitle()
+     setTitle()
+}
+
+class item{
+  - String description
+  - Boolean complete
+  - Date dueDate
+
+  getDueDate()
+  getComplete()
+  getDescription()
+
+  setDueDate()
+  setDescription()
+  setComplete()
+
+}
+
+class gui{
+    main()
+    start()
+}
+
+class itemController{
+    showLists()
+    showIncompleteItems()
+    showCompleteItems()
+    markComplete()
+    showAllItems()
+    removeItems()
+    editDescription()
+    editDueDate()
+}
+
+class listController{
+    createList()
+    deleteList()
+    renameList()
+    getLists()
+}
+
+class externalStorage{
+    loadOneList()
+    loadMultipleLists()
+    saveAll()
+}
+
+class HelloApplication{
+    main()
+    start()
+}
+
+class HelloController{
+    getStartedButton()
+    titlePage()
+}
+
+class methodTesters{
+    addList()
+    deleteList()
+    renameList()
+    saveAll()
+    showAllItems()
+    showCompleteItems()
+    showIncompleteItems()
+    createList()
+    loadOneList()
+    loadMultipleLists()
+    editDescription()
+    editDueDate()
+    markComplete()
+    showLists()
+}
+
+javafx.Application <|-- gui
+HelloApplication <|-- gui
+
+HelloApplication - HelloController
+gui - listController
+
+listController- list
+
+list-item
+
+itemController -gui
+itemController-item
+
+list - externalStorage
+
+methodTesters - itemController
+methodTesters - listController
+methodTesters - externalStorage
+@enduml
